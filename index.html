@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link href="https://fonts.googleapis.com/css2?family=Catamaran:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/e48d166edc.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="css/nav.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/Sort_info.css">
+ 
+  <title>Sort Visualizer</title>
+  
+</head>
+<body>
+  <div class="BG">
+
+    <nav>
+      <input type="checkbox" id="check">
+      <label for="check" class="checkbtn">
+        <i class="fas fa-bars"></i>
+      </label>
+      <label class="logo">Sorting Visualizer</label>
+
+      <ul>
+        
+        <li><button class="algo-btn">Bubble Sort</button></li>
+        <li><button class="algo-btn">Selection Sort</button></li>
+        <li><button class="algo-btn">Insertion Sort</button></li>
+        <li><button class="algo-btn">Merge Sort</button></li>
+        <li><button class="algo-btn">Quicksort</button></li>
+        <li><button class="algo-btn">Heapsort</button></li>
+     
+     
+      </ul>
+    </nav>
+
+    
+        <div id="array-container">
+          <div id="array"></div>
+          <h5 id="no-algo-warning" class="display-none">No Algorithm Selected!</h5>
+      </div>
+      <div id="change-container">  
+              <div class="slider-container">
+                  <label>Array Size</label>
+                  <input type="range" min="1" max="50" id="size-slider" autocomplete="off">
+              </div>
+              <div class="slider-container">
+                  <label>Speed</label>
+                  <input type="range" min="1" max="50" id="speed-slider" autocomplete="off">
+              </div>
+         
+              <div id="center-btn">
+                  <button id="randomize">Randomize</button>
+                  <button id="sort">Sort</button>
+              </div>
+      </div>
+      
+
+      <div class="SortInfo">
+        <hr>
+        <h1>Select Algorithm</h1>
+        <div class="SortInfo__Body">
+         <article class="SortInfo__Article">
+             <p >You must select an algorithm before you can visualize it's execution on an array of numbers.</p>
+            </article>
+            <aside class="SortInfo__Aside">
+                <h3>Performance</h3>
+                <table>
+                    <tbody>
+                        <tr>
+                            <td>Worst-case time complexity</td>
+                            <td>
+                                <code>
+    
+                                </code>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Best-case time complexity </td>
+                            <td>
+                                <code></code>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Best-case time complexity </td>
+                            <td>
+                                <code></code>
+                            </td>
+                        </tr><tr>
+                            <td>Worst-case space complexity</td>
+                            <td>
+                                <code></code>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </aside></div>
+        
+        </div>
+
+  </div>
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+  <script src="scripts/script.js"></script>
+    <script src="scripts/bubble-sort.js"></script>
+    <script src="scripts/selection-sort.js"></script>
+    <script src="scripts/insertion-sort.js"></script>
+    <script src="scripts/merge-sort.js"></script>
+    <script src="scripts/quicksort.js"></script>
+    <script src="scripts/heapsort.js"></script>
+    <script src="scripts/infosort.js"></script>
+</body>
+
+</html>
