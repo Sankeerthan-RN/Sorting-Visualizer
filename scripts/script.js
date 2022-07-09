@@ -11,7 +11,7 @@ const MAX = 300;
 
 const WAITING_TIME = 100;
 
-const UNSORTED = 'deepskyblue';
+const UNSORTED = '#03DAC6';
 const SORTED = 'mediumspringgreen';
 const COMPARE = 'crimson';
 const SELECTED = 'blueviolet';
@@ -67,20 +67,22 @@ function createArray() {
     }
 }
 
+
 function setHeight(id, height) {
-    // $("#e" + id).css('height', height);
-    document.getElementById("e"+id).style.height=height;
+    $("#e" + id).css('height', height);
+  
+  
 }
 
 function setColor(id, color) {
-    // $("#e" + id).css('background-color', color);
-    document.getElementById("e"+id).style.backgroundColor=color;
+    $("#e" + id).css('background-color', color);
+   
 }
 
 function setColorRange(p, r, color) {
     for(var i = p; i <= r; i++)
     {
-        document.getElementById("e"+i).style.backgroundColor=color;
+        $("#e" + i).css('background-color', color);
     }
 }
 
@@ -137,9 +139,11 @@ $(document).ready(function() {
 
     $(".algo-btn").click(
         function() {
+            
             algo_selected = $(this).html();
+           
+            
             infosort(algo_selected);
-
             $(".algo-btn-active").removeClass('algo-btn-active');
             $(this).addClass('algo-btn-active');
 
@@ -147,6 +151,7 @@ $(document).ready(function() {
             $("#no-algo-warning").addClass('display-none');
         }
     );
+
 
     $("#sort").click(
         async function() {
@@ -164,9 +169,9 @@ $(document).ready(function() {
                 await insertionSort();
             else  if(algo_selected == "Merge Sort")
                 await mergeSort(0, size - 1);
-            else if(algo_selected == "Quicksort")
+            else if(algo_selected == "Quick Sort")
                 await quicksort(0, size - 1);
-            else if(algo_selected == "Heapsort")
+            else if(algo_selected == "Heap Sort")
                 await heapsort();
             else {
                 

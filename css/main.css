@@ -79,6 +79,8 @@ body {
     display: inline-block;
     border-radius: 5px;
     background-color: red;
+  
+
 }
 
 
@@ -149,18 +151,22 @@ body {
 }
 
 .algo-btn:hover {
-  background: #F6F9FE;
-  color: #174ea6;
+  cursor: pointer;
+  transform: scale(1.1);
+  color: #fafcff;
 }
 
 .algo-btn:active {
   box-shadow: 0 4px 4px 0 rgb(60 64 67 / 30%), 0 8px 12px 6px rgb(60 64 67 / 15%);
+  transition: box-shadow 280ms cubic-bezier(.4, 0, .2, 1),opacity 15ms linear 30ms,transform 270ms cubic-bezier(0, 0, .2, 1) 0ms;
+   background: #c3144b;
   outline: none;
 }
 
 .algo-btn:focus {
   outline: none;
-  border: 2px solid #4285f4;
+  border: 2px solid #050505;
+  background: #c3144b;
 }
 
 .algo-btn:not(:disabled) {
